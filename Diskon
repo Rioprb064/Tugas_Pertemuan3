@@ -1,0 +1,31 @@
+program diskon_belanja;
+uses crt;
+var
+    belanja,total:real;
+begin
+    clrscr;
+    write('Masukkan total belanja Anda : '); readln(belanja);
+    if (belanja<100000) then
+        begin
+            writeln('Tidak ada diskon');
+            writeln('Total belanja Anda adalah : ',belanja);
+        end
+    else if (belanja<500000) then
+        begin
+            writeln('Diskon 10%');
+            total:=belanja-(belanja*10/100);
+            writeln('Total belanja Anda adalah : ',total:0:2);
+        end
+    else if (belanja<1000000) then
+        begin
+            writeln('Diskon 20%');
+            total:=belanja-(belanja*20/100);
+            writeln('Total belanja Anda adalah : ',total:0:2);
+        end
+    else 
+        begin
+            writeln('Diskon 30%');
+            total:=belanja-(belanja*30/100);
+            writeln('Total belanja Anda adalah : ',total:0:2);
+        end;
+end.
