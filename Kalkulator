@@ -1,0 +1,23 @@
+program kalkukaltor;
+uses crt;
+var 
+    bil1, bil2, hasil:real;
+    pilih:integer;
+begin
+    clrscr;
+    writeln ('1. Penjumlahan');
+    writeln ('2. Pengurangan');
+    writeln ('3. Perkalian');
+    writeln ('4. Pembagian');
+    writeln ('');
+    write ('Pilih operasi yang Anda inginkan (angka) : '); readln (pilih);
+    write ('Masukkan angka pertama    : '); readln (bil1);
+    write ('Masukkan angka kedua      : '); readln (bil2);
+    case pilih of
+        1 : hasil := bil1+bil2;
+        2 : hasil := bil1-bil2;
+        3 : hasil := bil1*bil2;
+        4 : hasil := bil1/bil2;
+        end;
+    writeln ('Hasil operasi bilangan adalah ',hasil:0:2);
+end.
