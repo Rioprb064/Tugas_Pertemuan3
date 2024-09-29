@@ -1,0 +1,23 @@
+program konversi_suhu;
+uses crt;
+var
+    suhu1, hasil:real;
+    pilih:integer;
+begin
+    clrscr;
+    writeln ('1. Celsius ke Fahrenheit');
+    writeln ('2. Fahrenheit ke Celsius');
+    writeln ('3. Celsius ke Kelvin');
+    writeln ('4. Kelvin ke Celsius');
+    write ('Pilih jenis konversi suhu : ');
+    readln (pilih);
+    write ('Masukkan suhu : ');
+    readln (suhu1);
+    case pilih of
+        1 : hasil := suhu1*(9/5)+32;
+        2 : hasil := 5/9*(suhu1-32);
+        3 : hasil := suhu1+273;
+        4 : hasil := suhu1-273;
+    end;
+    writeln ('Hasil konversi suhu adalah : ',hasil:0:2);
+end.
